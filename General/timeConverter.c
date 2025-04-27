@@ -36,20 +36,23 @@ void toLowerCase(char *choice) {
 int main(){
     int input, hours, minute, second;
     char choice[10], low;
+    printf("Option:\n");
+    printf("Second | Minute | Hour\n");
+    printf("Enter the Time Converter Option: ");
     scanf("%s", choice);
     printf("%s", choice);
     if (strcmp(choice, "second")==0){
         printf("\nEnter a Time in Second: ");
         scanf("%d", &input);
         secondVersion(input);
-    } else if (strcmp(choice, "hour")==0){
-        printf("\nEnter a Time in Hours: ");
-        scanf("%d", &input);
-        hourVersion(input);
     } else if (strcmp(choice, "minute")==0){
         printf("\nEnter a Time in Minute: ");
         scanf("%d", &input);
         minuteVersion(input);
-    }
+    } else if (strcmp(choice, "hour")==0){
+        printf("\nEnter a Time in Hours: ");
+        scanf("%d", &input);
+        hourVersion(input);
+    } 
     return 0;
 }
